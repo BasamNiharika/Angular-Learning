@@ -1,0 +1,37 @@
+Components -> Basic building blocks of an Angular Application
+    {root component is App Component}
+    -- consist of html, css and ts files
+    -- spec.ts file is for testing purpose.
+
+1. InterPolation 
+  - to bind data from component class to html template. It uses double curly braces {{}}.
+
+2. Property binding
+  - to bind properties of html using square brackets []  e.g: [src],[href],[attr] etc
+  - Property binding is more reliable for non-binding strings like booleans.
+
+3. Event Binding:(One Way Binding)
+  Events are the actions performed by the users
+  Types of Events
+    1.Mouse Events, 2. Keystroke Events 3. Input Events
+  Events are generally executed with the combination of functions
+
+  Note: With Javascript we use onClick() Event
+             Angular we use click() Event
+
+  3.1 Mouse Related Events:
+  (click)                      (dblclick) - double click
+  (mouseover)                  (mouseleave)
+  (mousedown)                  (mouseup)
+  (drag)                       (dragover)
+
+  3.2 Keyboard Related Events:
+  (keypress)                     (Keydown)              (keyup)          (keydown.enter)            (keyup.enter)
+  (select)                       (focus)                (input)
+  Some more are :
+  (copy)                          (cut)               (blur)                  (paste)
+
+  3.3 Event Object
+      Event Object($event) in Angular is a reserved keyword that is used to pass the evnet object from template to component typescript file.
+  
+  

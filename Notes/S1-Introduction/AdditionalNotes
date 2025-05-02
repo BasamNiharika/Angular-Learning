@@ -1,0 +1,32 @@
+General Notes about Angular:
+  -- TypeScipt is a Javascript superset-an extension of Javascript 
+     |
+     |
+  (Strong and strict typing).
+ 
+ -- With TypeScipt, it can be easy to catch errors early during development
+
+ -- Angular-> new Major version is released for every 6 months.
+              It is back-ward compatible and stablity.
+
+ -- TypeScipt(it is declarative code)
+
+ --config files in Angular are responesible for converting TypeScipt to Javascript and helps in compilation( generally browser 
+ do not support TypeScipt)
+
+ --package.json files have dependencies
+ --angular.json have configurations
+ --src is the main folder which has main.ts(first file to execute when application is loaded),assets,html etc..
+    (It is the folder where our main application logic will be written)
+
+ --node modules contains all third part libraries on which Angular Application depend on  
+ --styles.css->(for global styles)
+ --gitignore -> It ensures that certain files or folders remain hidden  from git repository
+ --index.html is the entry point of application while execution
+
+
+To check Angular version 
+ In Angular CLI enter :  ng version 
+
+To install Angular@CLI globally
+ In Angular CLI enter : npm i -g @angular/cli 

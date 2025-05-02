@@ -1,0 +1,60 @@
+<div class="div">
+    <h1>Interpolation</h1>
+    <!-- Different ways of Interpolation-->
+    <!-- 1. Directly passing expressions  -->
+    <h2>{{ 3+2 }}</h2>
+    <!-- 2.binding value(title1) from component class -->
+    <h2> {{ title1 }}</h2>
+    <!-- 3.Binding value(title2) which is undefined -->
+    <h2> {{title2}}</h2> <!-- it will not throw error and nothing visible on browser-->
+    <!-- 4.string concatenation -->
+    <h2> {{title1 + " is Interpolation"}}</h2>
+    <!-- 5.ternary expressions -->
+    <h2> {{isActive? 'Active':'InActive'}}</h2>
+    <hr>
+</div>
+
+<div>
+    <h1> Property Binding </h1>
+    <!--using Interpolation for binding values-->
+    <input type="text" value="{{inputvalue}}" disabled="{{isDisabled}}">
+    <br><br>
+    <!-- Using property Binding -->
+    <input type="text" [value]="inputvalue" [disabled]="isDisabled">
+    <img [src]="imgSrc" alt="No image">
+    <hr>
+</div>
+
+<div class="event">
+    <h1> Event Binding</h1>
+    <button type="submit" (click)="Display()"> Click Me</button>
+    <!-- Counter example with mouse click event-->
+    <div class="counter">
+        <h1> Counter Example using mouse click event</h1>
+        <button type="submit" (click)="counter('incr')">Increment</button>
+        {{count}}
+        <button type="submit" (click)="counter('decr')">Decrement</button>
+    </div>
+    <!-- Keyboard Events -->
+    <h1> keyboard Event</h1>
+    <div>
+        <input type="text" (keypress)="onKeyPress()">
+    </div>
+    <!-- Event Object ($event)-->
+    <h1> Event Object</h1>
+    <div class="event">
+        <input type="text" (keyup)="eventObject($event)">
+    </div>
+    <div class="event shift y">
+        <!-- It is the case when user wants to execute a method() when particular key or key combination is pressed -->
+        <!-- <input type="text" (keydown.shift.y)="onShift()"> -->
+    </div>
+    <hr>
+
+    <!-- counter Example with Keyboard Event -->
+    <!-- here tabindex property of html is helps in focusing the div element because there is no input or button elements used here  -->
+    <div class="counter-keyboard" tabindex="0" (keydown)="onKeyPressed($event)">
+        <h1> Counter Example using Keyboard event</h1>
+        <h2>Counter: {{keyCount}}</h2>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+Introduction to Angular:
+
+What is Angular?
+  1. It is frontend JavaScript Framework{useful for building interatcive web applications}.
+  2. collection of Tools and features{ CLI(using commands to create app,components, modules etc),debugging tools, IDE plugins}
+  Note: It is a framework(which helps in providing tools and libraries to build web Applications)
+
+Why to use Angular ?
+  1. Popular,
+  2. Simplifies the process of building complex interatcive UI's easily
+  3. Flexible,
+  4. OOPs concepts and principles
+  5. uses TypeScript
+
+Why components ?
+   1. break up complex applications into simple building blocks.
+   2. Build up once and re-use it.
+   3. Useful in development process, componentscan be divided and working happens concurrently across teams.
+   4. Reduce dependenices.
+
+Angular CLI:
+
+Angular CLI is a command line interface which is used to initialize, develop and maintain Angular Applications 
+directly from command shell
+** Useful fro
+  1. Running development server
+  2. deploying the appication   
+  3. Testing of Application (npm run test)
+
+For creating component -> ng generate component "component name here" or ng g c "component name here"
+       example: ng g c user { It creates html,css, ts file, spec.ts file}
+If wanted to skip test cases file i.e spec.ts file
+      ng g c component-name --skip-tests=true  (or) 
+      ng generate component component-name --skip-tests=true
+
+For creating module -> ng generate module module-name (or) ng g m module-name
+
+For creating service -> ng generate service service-name (or) ng g s service-name
+
+To run Angular application run command
+  ng serve (or) ng serve --o {by default it run on  http://localhost:4200/ }
+
+Features:
+1. Standalone
+2. Uses Signals
+3. Dependency Injection
+4. Preloading strategies
+
