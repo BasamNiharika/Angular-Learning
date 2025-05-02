@@ -1,1 +1,17 @@
-<p>fundamentals-2 works!</p>
+<div class="two-way-binding">
+    <h1>Two Way Binding</h1>
+    <input type="text" [(ngModel)]="staticInput"><br><br>
+    <input type="text" [(ngModel)]="dynamicInput">
+    <h2>{{dynamicInput}}</h2>
+    <hr>
+</div>
+
+<h1>CART EXAMPLE</h1>
+<div class="cart-example">
+    <h1>Quantity (No. of items)</h1>
+    <input type="number" [(ngModel)]="NoOfItems" (keyup)="priceCalculation()"><br>
+    <div>
+        <h2>price per Item : {{priceOfItem}}</h2>
+        <h3>Total price</h3><input type="text" [(ngModel)]="totalPrice">
+    </div>
+</div>

@@ -5,7 +5,10 @@ import { Fundamentals2Component } from "./fundamentals-2/fundamentals-2.componen
 
 @Component({
   selector: 'app-root',
-  imports: [FundamentalsComponent, Fundamentals2Component],
+  imports: [
+    // FundamentalsComponent, 
+    Fundamentals2Component
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

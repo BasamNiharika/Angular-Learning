@@ -1,0 +1,20 @@
+Important Concept:
+
+Two Way Data Binding [(ngModel)]:
+ -- refers to synchronization or sharing of the data between the model(the component) and the view(Html template).
+ -- It allows the automatic update of both  the model and the view when either one changes. 
+ -- Two binding is a combination of propeerty binding and event binding
+   [(ngModel)]="dynamicInput" <=> 
+                   [ngModel]="modelProperty"                //property binding
+                   (ngModelChange)= "modelProperty=$event"  //event binding
+
+To make two way binding possible, first need to import FromsModule, because it has ngModel directive in template driven 
+forms 
+It controls and handles-input,textarea, select etc.,
+
+*One way binding is simpler and two way binding privides real time synchronization between model and the view.
+
+Note: Simple cart example can also done by using get method for total price and readOnly property in html.
+
+Extra points(not required):
+[()]=>it is called banana in the box
