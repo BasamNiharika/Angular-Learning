@@ -1,1 +1,103 @@
-<p>directives works!</p>
+<div class="ngIf">
+    <!-- Using *ngIf -->
+    <h1>*ngIf Directive</h1>
+    <h2 *ngIf="display1; else hidden ">Message is displayed</h2>
+    <ng-template #hidden>
+        <div> Message is hidden </div>
+    </ng-template>
+
+    <!-- Using @if and @else -->
+    @if(display2){
+    <h3>message is displayed</h3>
+    }@else {
+    <h3>message is hidden</h3>
+    }
+
+    <div class="example">
+        <h5 *ngIf="num>0">{{num}} is greater than zero</h5>
+        <h5 *ngIf="num<0">{{num}} is less than zero</h5>
+        <h4 *ngIf="num==0">{{num}} is equal to zero</h4>
+    </div>
+    <div class="hide-and-show">
+        <button (click)="show()">Show</button>
+        <p *ngIf="displayelement">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quidem mollitia dolore id soluta voluptatem
+            iure temporibus dolores earum pariatur, impedit similique aliquid optio minima aliquam nemo quia corrupti
+            iste.
+        </p>
+    </div>
+    <hr>
+
+    <!-- *ngFor -->
+    <div class="ngfor">
+        <h1>*ngFor Directive</h1>
+        <!-- using index -->
+        <div *ngFor="let item of items1, index as i">
+            <h1>{{i}}. {{item}}</h1>
+        </div>
+        <!-- using trackby -->
+        <div *ngFor="let item of items2; trackBy:trackByItemId">
+            <h1>{{item.id}}. {{item.name}}</h1>
+        </div>
+        <button (click)="updateItem()">Update</button>
+    </div>
+    <!-- *ngFor with nested Arrays -->
+    <h2> *ngFor with nested Arrays</h2>
+    <div *ngFor="let row of matrix">
+        <div *ngFor="let cell of row">
+            {{cell}}
+        </div>
+    </div>
+    <hr>
+</div>
+
+<!-- *ngSwitch  directive -->
+ <div [ngSwitch]="person.age">
+    <P *ngSwitchCase="10">Person is 10 years Old</P>
+    <P *ngSwitchCase="20">Person is 20 years Old</P>
+    <P *ngSwitchCase="30">Person is 30 years Old</P>
+    <P *ngSwitchDefault>Person is {{person.age}} years Old</P>
+ </div>
+
+<div>
+    <h1> control flow statements</h1>
+     <!-- employee example for executing control flow statements -->
+     <!-- @for  -->
+    <div>
+        <h1> List of Employees </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th> ID</th>
+                    <th> Name</th>
+                    <th> Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(emp of employees(); track emp.id){ <!-- track function is mandatory, for index use track $index-->
+                <tr>
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.role}}</td>
+                </tr>
+                }
+                @empty {
+                    <h2>
+                        No Data found !
+                    </h2>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr>
+
+<div class="age Eligibility">
+    <h1> Age Validation Example</h1>
+    <label>Enter your Age:</label>
+    <input type="text" (input)="eligibilityCheck()" [(ngModel)]="Age"/>
+    <div [ngSwitch]="isEligible">
+        <p *ngSwitchCase="true"> YOU ARE ELIGIBLE TO VOTE</p>
+        <p *ngSwitchDefault> YOU ARE NOT ELIGIBLE TO VOTE</p>
+    </div>
+</div>

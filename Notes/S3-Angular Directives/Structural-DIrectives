@@ -1,0 +1,51 @@
+Angular Directives:
+ 
+What is a Directive ?
+A set of classes , used for adding  some additional behaviour to the element or the component of the Angular Application.
+
+There are three main types of directives:
+They are:
+
+1. Structural Directive:
+    These are responsible for shaping and reshaping the size of DOM, handling tasks like adding, removing and manipulating the elements. 
+    example: *ngFor *ngIf  *ngSwitch (most commonly used)
+
+2. Attribute Directives:
+    These are responsible for changing the appearance of html elements
+    example:  (ngClass, ngModel, ngStyle)
+
+3.  component Directives:
+ responsible for controlling the rendering of the Angular components in the Angular Applications
+
+There is one more type of directive i.e custom directive which is created by the user for defining a new behaviour.
+
+Note: When using these structual directives we need to import common Module or classes of ngIf, ngFor,ngSwitch
+
+*ngIf directive:
+  {condinally render the html elements just like if else condition}
+Benefit -> It not hide the element but compltely removes from the DOM(Document Object Model).
+
+*ngFor directive:
+  { looping over an array}
+  using index,   (it is ineffiecient)
+        trackBy (for effiecient appraoch )
+
+Control Flow statements: 
+ @for  
+ --> @for statement is concise, more readable and safer to use than ngFor directive due to mandatory tracking function.
+ --> there is built-in variable for storing index i.e $index
+ @if
+ @switch
+  code:
+  @switch(condition){
+    @case(expr 1){
+      <div> Section1 </div>
+    }
+    @case(expr 1){
+      <div> Section2 </div>
+    }
+    @default{
+      <div> Section default </div>
+    } ...
+  }
+These are concise and better than ng directives.
