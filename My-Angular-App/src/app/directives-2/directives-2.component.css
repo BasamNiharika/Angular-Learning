@@ -1,0 +1,49 @@
+.style{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: rgb(44, 5, 59);
+    margin: 0 auto;
+    color: white;
+}
+.italicText{
+    font-style: italic;
+}
+.letterFormat{
+    text-transform: uppercase;
+}
+input{
+    /* margin-top: 20px; */
+    height: 20px;
+    width: 250px;
+    font-size: 15px;
+    color: black;
+}
+input.txt{
+    background-color: rgb(19, 131, 151);
+}
+
+.container{
+    box-shadow: gray;
+    margin: 20px;
+    border: black auto;
+    .button{
+        background-color: rgb(37, 36, 36);
+        border-radius: 5px;
+        height:20px;
+        justify-content: center;
+        color: whitesmoke;
+    }
+    .box{
+        background-color: rgb(250, 253, 253);
+        box-shadow: gray;
+        /* border-color: black; */
+    }
+    .light{
+        background-color: white;
+        color: black;
+    }
+    .Dark{
+        background-color: black;
+        color: white;
+    }
+}

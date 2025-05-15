@@ -1,0 +1,29 @@
+Attribute Directives:
+ - These directives are used for controlling Appearance like adding or removing
+ CSS styles dynamically (or) Assigning CSS classes by giving conditions.
+
+1. ngClass 
+  --> Using ngClass directive provide dynamic styling to the interface.
+
+2. ngStyle
+  --> ngStyle is the built-in attribute directive that allows setting dynamic CSS styles on HTML elements i.e inline styling.
+
+3. ng-container
+  --> It wrap the elements in a container without adding any extra element(like div's) to the DOM.
+  --> ng-container does not get rendered in DOM, as it is a angular directive not html tag
+
+4. ng-template
+  --> It is a block of code which can be used mutiple times throughout the document
+  --> It can be accessed by reference variable from ng-container
+  --> It also does not extra elements in DOM.
+  --> It can be used by *ngfor and *ngIf
+  --> it is not a self renedering element
+
+  4.1 ngTemplateOutlet
+  --> *ngTemplateOutlet is used for renedering variable to ng-template without any condition
+  --> Parameter, context: {key:value} It is used to provide data for ng-template
+
+  4.2 $implicit Keyword
+  --> It is used to provide an implicit value to a template without giving the additional variable inside the context
+
+  

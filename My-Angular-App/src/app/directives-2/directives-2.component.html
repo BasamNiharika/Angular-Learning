@@ -1,2 +1,88 @@
-<!-- <p>directives-2 works!</p> -->
 <h1> Attribute Directives</h1>
+<!-- ngclass Attribute -->
+<div>
+    <h1> ngClass</h1>
+    <h1 [ngClass]="'style italicText letterFormat'">Welcome to Angular Programming</h1>
+    <!-- ngclass with CSS classes as an Array -->
+    <h1 [ngClass]="['style','italicText']">Welcome to Angular Programming</h1>
+    <!-- ngclass with CSS classes as an Object -->
+    <h1 [ngClass]="{ style:true, letterFormat:true, italicText:false}">Welcome to Angular Programming</h1>
+</div>
+<!-- case: when user enters in input field, background colour should change -->
+<h3> Example case: when user enters in input field, background colour should change</h3>
+<div class="example">
+    <input type="text" (input)="textInput($event)" placeholder="Enter text here..." [ngClass]="{txt:hasText}" />
+</div>
+<!-- Toogle Functionality Example -->
+<h1>Toggle Functionality</h1>
+<div class="container">
+    <button class="button" (click)="switchMode()">{{mode === true? 'Switch to Light':'Switch to Dark'}}</button>
+    <div class="box" [ngClass]="mode?'Dark':'light'">
+        <h4>Light Mode</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur<br>
+            adipisicing elit. Illum molestias, iste odit quae corrupti, maxime tenetur vero alias placeat ex
+            temporibus!<br>
+            Reprehenderit excepturi rerum quaerat, expedita sunt voluptate recusandae laudantium.
+        </p>
+    </div>
+    <div class="box" [ngClass]="mode?'Dark':'light'">
+        <h4>Dark Mode</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur<br>
+            adipisicing elit. Illum molestias, iste odit quae corrupti, maxime tenetur vero alias placeat ex
+            temporibus!<br>
+            Reprehenderit excepturi rerum quaerat, expedita sunt voluptate recusandae laudantium.
+        </p>
+    </div>
+</div>
+<hr>
+<!-- ngStyle Attribute -->
+<h1> ngStyle</h1>
+<div style="text-align: center;">
+    <p [ngStyle]="{ 'color':colorVal,'font-size':'40px','font-style':isItalic}">Example 1 for an ngStyle Attribute</p>
+    <p [ngStyle]="applyVal">Example 2 for an ngStyle Attribute</p>
+</div>
+
+<!-- case: when user enters in input field, background colour should change -->
+<h3> Example case: when user enters in input field, background colour should change</h3>
+<div class="example">
+    <input type="text" [(ngModel)]="name" [ngStyle]="{'background-color': name ? 'lightgreen': '#ffb6c1'}" />
+</div>
+<hr>
+<!-- ng-template -->
+<h1> ng-template</h1>
+<div class="template">
+    <ng-container *ngIf="isAuthorized; else unauthorized">
+        <h4>Authorized User</h4>
+    </ng-container>
+    <ng-template #unauthorized>
+        <h4>Unauthorized User</h4>
+    </ng-template>
+    <ng-container *ngIf="listItems.length>0; else noitems ">
+        <ul>
+            <li *ngFor="let item of listItems">
+                <h5>{{item}}</h5>
+            </li>
+        </ul>
+    </ng-container>
+    <ng-template #noitems>
+        <h3> No items found</h3>
+    </ng-template>
+</div>
+<hr>
+
+<h1>ngTemplateOutlet</h1>
+<div class="ngTemplateOutlet">
+    <ng-template #show let-msg="showMessage">
+        {{msg}}
+    </ng-template>
+    <ng-container
+        *ngTemplateOutlet="show;context: {showMessage:'This is the context message(ngTemplateOutlet)'}"></ng-container>
+</div>
+
+<h1>$implicit Keyword</h1>
+<div class="ngTemplateOutlet">
+    <ng-template #show let-msg>
+       Message: {{msg}}
+    </ng-template>
+    <ng-container *ngTemplateOutlet="show;context: {$implicit:'This is the context message'}"></ng-container>
+</div>
