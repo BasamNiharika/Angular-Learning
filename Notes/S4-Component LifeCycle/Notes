@@ -1,0 +1,30 @@
+Introduction to LifeCycle Component:
+
+Like constructors, there are other such methods called automatically at the different levels or phases of component's Life Cycle.They are 
+called life cycle methods or life cycle hooks
+
+Phases of Component Life Cycle:
+
+constructor
+1. ngOnChanges
+2. ngDoCheck
+3. ngAfterContentInit
+4. ngAfterContentChecked
+5. ngAfterViewInit
+6. ngAfterViewChecked
+7. ngDestroy
+
+1. ngOnChanges
+ ->> ngOnChanges hook is called everytime whenever there is a change detected in input properties of the compoenent.
+ ->> It is only applicable for @input change
+ ->> It cannot be used for other properties.
+ ->> simpleChanges is an interface object that is used to provide previous and current values.
+
+@Input() used for passing the value from the parent component to the child compoenent.
+
+2. ngOnInit
+ ->> It is only called once when compoenent is initialized, and only once in compoenent life cycle.
+ ->> ngOnInit is  called after ngOnChanges life cycle hook.
+ ->> ngOnInit is a prefered place to fetch data from an API, but not cpnstructor.
+
+Note: constructor is initialized before component is fully intialized. So it is better to initialize things inside ngOnInit

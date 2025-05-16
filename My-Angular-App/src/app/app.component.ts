@@ -4,6 +4,7 @@ import { FundamentalsComponent } from "./fundamentals/fundamentals.component";
 import { Fundamentals2Component } from "./fundamentals-2/fundamentals-2.component";
 import { DirectivesComponent } from "./directives/directives.component";
 import { Directives2Component } from "./directives-2/directives-2.component";
+import { LifecycleHooksComponent } from "./lifecycle-hooks/lifecycle-hooks.component";
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { Directives2Component } from "./directives-2/directives-2.component";
     // FundamentalsComponent, 
     // Fundamentals2Component,
     // DirectivesComponent
-    Directives2Component
+    // Directives2Component,
+    LifecycleHooksComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
