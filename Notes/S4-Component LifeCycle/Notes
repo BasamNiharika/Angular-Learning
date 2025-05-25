@@ -28,3 +28,42 @@ constructor
  ->> ngOnInit is a prefered place to fetch data from an API, but not cpnstructor.
 
 Note: constructor is initialized before component is fully intialized. So it is better to initialize things inside ngOnInit
+
+3. ngDoCheck
+ ->> It is used for performing a custom change detection and responding to the changes in a component. It allows to implement our change 
+ detection algorithm for the given  component.
+ ->> When ngOnChanges hook failed to detect changes in an input property, then we can go for ngDoCheck hook to detect changes in @input
+  property.
+Note: Never use ngOnChanges and ngDocheck together in the same component, it causes unwanted behaviour.
+ ->> ngDoCheck() also helpful to changes in non-input properties.
+
+4. ngAfterContentInit
+  ->> It is invoked whenever there is some content projected into the component.
+  ->> If we want to send data from parent component to child compoenent it can be done through @input, but it is not possible with html
+  tags and css classes to pass from parent compoennet to child component. So, content projection comes into picture.
+  ->> content projection is a way to pass the HTML or CSS content from the parent component to child component by using
+  <ng-content> directive.
+  ->> ngAfterContentInit() hook is invoked whereever there is content projection.
+  ->> called Only once throughout the components LifeCycle.
+  ->> It is mostly used in relation with the child components and content projection.
+  ->> This is called after ngDoCheck() hook.
+
+5. ngAfterContentChecked
+ ->> It checks for the content of the component on every change detection cycle.
+ ->> This hook will get invoked each time the content of the component is checked after being projected.
+
+6. ngAfterViewInit
+ ->> It is called when the angular finishes the initialization of the view( view means A component and its related HTML template ) in the DOM.
+
+7. ngAfterViewChecked
+ ->> Angular fires the ngAfterViewChecked() hook after checking the component's view and the child views
+
+8. ngDestroy
+ ->> It is called only once during the components lifecycle right before the component gets destroyed.
+ ->> Any clean up code for the component should be written inside this hook before the component gets destroyed. 
+ ->> The ngOnDestroy() is not called when the user refreshes or closes the browser
+ clean up code may include :
+ * Removal of local storage information
+ * stop timers
+ * Tasks that prevent the memory leaks etc...
+

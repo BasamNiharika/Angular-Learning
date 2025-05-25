@@ -1,3 +1,48 @@
-<p>lifecycle-hooks works!</p>
-<button (click)="updateValue()"> Update value</button>
-<app-test [inputValue]="value"></app-test>
+<!-- ngOnchanges -->
+<div class="onChnages">
+    <h1>ngOnchanges</h1>
+    <button (click)="updateValue()"> Update value</button>
+    <app-test [inputValue]="value"></app-test>
+</div>
+<hr>
+
+<!-- ngDoCheck -->
+<div class="docheck-hook">
+    <h1>ngDoCheck</h1>
+    <app-test [user]="user"></app-test>
+    <button (click)="changeUserName()"> Change User</button>
+</div>
+<hr>
+
+<!-- ngAfterContentInit -->
+<div class="ngAfterContent">
+    <h1>ngAfterContentInit</h1>
+    <h2>Parent Component</h2>
+    <app-test>
+        <p>This is paragraph injecting into child Component. This is injected from parent component "Lifecycle-hooks"
+        </p>
+    </app-test>
+</div>
+<!-- <hr> -->
+<div class="example">
+    <h2>Parent Component</h2>
+    <button (click)="sendDataToChild()">Genearate Number</button>
+    <app-test>
+        <h3>{{dataFromParent}}</h3>
+        <div #contentWrapper>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum earum quis nisi sapiente omnis.
+            Harum aliquam qui veniam corrupti optio molestias facilis placeat ducimus, magnam eos, suscipit dolorum
+            illum? Minima?
+        </div>
+    </app-test>
+</div>
+<hr>
+
+<!-- ngOnDestroy -->
+<div class="destroy">
+    <h2>ngOnDestroy</h2>
+    <button (click)="toggle()">SHOW/HIDE</button>
+    @if(displayComponent){
+    <app-test></app-test>
+    }
+</div>
