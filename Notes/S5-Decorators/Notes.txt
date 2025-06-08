@@ -1,0 +1,96 @@
+Decorators:
+Angular provides a way to define or assign information to a component class called as metadata.
+Decorator-prefixed with @ followed by decorator name.
+
+What is decorator ?
+With a decorator - we are passing information to the component, class or function on how they should be processed, instantiated
+ and used at run time.
+
+Angular provides 4 types of decorators:
+1. class decorators
+  * @NgModule
+  * @Component
+  * @Injectable
+  * @Directive
+  * @Pipe
+2. Property decorators
+  * @Input
+  * @Output
+  * HostBinding
+  * ContentChild
+  * ContentChildren 
+  * ViewChild
+  * ViewChildren 
+3. Parameter decorators
+  * @Inject
+  * @Self
+  * @SkipSelf 
+  * @Optional
+  * @Host
+4. Method decorators
+  * @HostListener
+
+Metadata values are used by Angular to organize the relationships between compoenents, directives, &modules with provider services.
+
+1. Class Decorators:
+
+* @NgModule (Not used after Angular 17 because they are standalone, they doesn't require modules)
+@NgModule({
+  declarations:[TestComponent],
+  imports: [TestModule],
+  providers: [],
+  bootstrap: []
+})
+
+ ->> declarations property- we put all compoenents defined inside the project.
+ ->> imports property- we put all modules defined inside the project.
+ ->> provides - here we provide the service or guard files - Known as dependencies, injected into the component.
+ ->> bootstrap - compoenent name to be loaded first 1.e entry point. example: App component
+
+* @Component
+@Component({
+  selector: // Provides html tag for component 
+  imports: // allows to declare other components/modules to use in this component
+  templateUrl: // has html link of this component
+  styleUrl: // has style sheet link of this component
+})
+
+2.Property Decorators
+* @Input decorator marks the property as input property - so that it can receive data from the parent component
+ ->> with the @Input() decorator, the data can be easily passed from parent component to child component.
+
+* @Output
+ ->> When the  property is decorated with @output -that property raises an event to notify the parent about change.
+ ->> The @output and EventEmitter work together to emit the event from child component and pass the data to the parent
+ component.
+
+* @viewChild-property decorator which is used for accessing child compoenents.
+ ->> Each component instance hold a view reference called viewRef
+ ->> It is used to obtain the references of child component methods and elements to perform tasks such as DOM(Document Object Model) 
+ Manipulation
+ e.g of DOM manipulation
+  -->> document.getElementById('myElement').innerText = 'New Text';
+  -->> document.getElementById('myImage').src = 'newImage.jpg';
+->> With the viewChild, we get the reference of any DOM element in the compoenent as above examples
+
+* @ContentChild - Accessing the projected content
+ ->> Instead of getting reference of the compoenents DOM elements. We get the reference of the content projected into the 
+ compoenents view
+->> To manipulate the DOM using the @ContentChild-make use of ngAfterContentInit() lifecycle hook method
+
+* @HostBinding
+ ->> The @HostBinding decorator is used within the custom directive to apply CSS style properties or DOM related tasks on the element.
+
+* @HostListener - Method decorator
+ ->> With the @HostListener - we are binding the class method to an event of the Host element
+ ->> DOM events like keyUp, KeyDown etc,.
+ ->> methods are compulsory for HostListeners
+
+ 3. Parameter Decorators
+  ->> The parameter decorators are used to decorate the parameters and they are mainly applied to a constructor parameter to inject or provide
+  additional metadata resources inside the application.
+   e.g 1. constructor(@Inject private optionalService: SomeService){ }
+       2. constructor(@Optional private optionalService: SomeService){ }
+
+
+The concept of injecting or providing services file like dependenicies are known as "dependency Injection"

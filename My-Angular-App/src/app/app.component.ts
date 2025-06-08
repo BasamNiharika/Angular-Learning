@@ -5,6 +5,8 @@ import { Fundamentals2Component } from "./fundamentals-2/fundamentals-2.componen
 import { DirectivesComponent } from "./directives/directives.component";
 import { Directives2Component } from "./directives-2/directives-2.component";
 import { LifecycleHooksComponent } from "./lifecycle-hooks/lifecycle-hooks.component";
+import { ParentDecoratorComponent } from './parent-decorator/parent-decorator.component';
+import { DecoratorAssignmentComponent } from "./decorator-assignment/decorator-assignment.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,9 @@ import { LifecycleHooksComponent } from "./lifecycle-hooks/lifecycle-hooks.compo
     // Fundamentals2Component,
     // DirectivesComponent
     // Directives2Component,
-    LifecycleHooksComponent
+    // LifecycleHooksComponent,
+    // ParentDecoratorComponent,
+    DecoratorAssignmentComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

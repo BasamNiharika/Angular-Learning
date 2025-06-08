@@ -43,6 +43,7 @@ Note: Never use ngOnChanges and ngDocheck together in the same component, it cau
   tags and css classes to pass from parent compoennet to child component. So, content projection comes into picture.
   ->> content projection is a way to pass the HTML or CSS content from the parent component to child component by using
   <ng-content> directive.
+  ->> gets called whenever the projected content is loaded inside the component
   ->> ngAfterContentInit() hook is invoked whereever there is content projection.
   ->> called Only once throughout the components LifeCycle.
   ->> It is mostly used in relation with the child components and content projection.
