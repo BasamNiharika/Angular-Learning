@@ -8,6 +8,7 @@ import { LifecycleHooksComponent } from "./lifecycle-hooks/lifecycle-hooks.compo
 import { ParentDecoratorComponent } from './parent-decorator/parent-decorator.component';
 import { DecoratorAssignmentComponent } from "./decorator-assignment/decorator-assignment.component";
 import { AngularPipesComponent } from "./angular-pipes/angular-pipes.component";
+import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,9 @@ import { AngularPipesComponent } from "./angular-pipes/angular-pipes.component";
     // LifecycleHooksComponent,
     // ParentDecoratorComponent,
     // DecoratorAssignmentComponent,
-    AngularPipesComponent
+    // AngularPipesComponent
+    CustomPipesComponent
+    
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

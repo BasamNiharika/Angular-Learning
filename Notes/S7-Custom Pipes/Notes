@@ -1,0 +1,24 @@
+Custom Pipes:
+
+Why custom pipes ?
+->> To perform any advance transformations on template easily and effectively.
+example: sorting, filtering, power, exponent and paginator etc
+
+To create custom pipe:
+ng g pipe "pipe-name-here"
+
+->> import pipe, pipeTransform from angular/core
+->> The main method for creating a custom pipe is the transform() method and with it we can perform any kind of changes on imput value.
+
+->> | symbol for pipe- it is union type in Angular-typescript.
+
+There are two types of pipes:
+1. Pure pipe
+2. Impure pipe
+
+1.pure pipe:(default)
+->> A pure pipe process input and return values without any side effects.
+
+2. Impure pipe:
+->> An impure pipe transform the data even if the input hasn't changed.
+->> To set pipe as impure, declare pipe: false inside @pipe decorator
