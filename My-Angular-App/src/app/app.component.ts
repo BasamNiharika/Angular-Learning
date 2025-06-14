@@ -7,6 +7,7 @@ import { Directives2Component } from "./directives-2/directives-2.component";
 import { LifecycleHooksComponent } from "./lifecycle-hooks/lifecycle-hooks.component";
 import { ParentDecoratorComponent } from './parent-decorator/parent-decorator.component';
 import { DecoratorAssignmentComponent } from "./decorator-assignment/decorator-assignment.component";
+import { AngularPipesComponent } from "./angular-pipes/angular-pipes.component";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { DecoratorAssignmentComponent } from "./decorator-assignment/decorator-a
     // Directives2Component,
     // LifecycleHooksComponent,
     // ParentDecoratorComponent,
-    DecoratorAssignmentComponent
+    // DecoratorAssignmentComponent,
+    AngularPipesComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

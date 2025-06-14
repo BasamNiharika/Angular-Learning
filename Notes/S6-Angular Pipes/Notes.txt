@@ -1,0 +1,23 @@
+Angular Pipes:
+
+->> Pipes are the template driven feature, that allows some transformation on the data before displaying them.
+->> If using multiple pipes, order of pipes is also considered - so  which is defined first will be executed first then rest.
+
+
+Note: To use built-in pipes import commonModule
+
+***Built-in Pipes:
+
+1. Slice pipe
+->> positive indexing slice: start-index: end-index (end-index character or element is not included inside text or Array)
+->> Negative indexing slice: index (index character or element is included inside text or Array)
+    in Negative indexing it only accepts one index except with zero start index.
+->> Using the slice pipe allows to display only some portion of an array while keeping the original array intact.
+
+2. Number pipe
+->> number: (number of digits before decimal).(number of digits after decimal)- (maximum length of decimals) e.g number: "3:2-3"
+
+3. JSON Pipe
+->> convert object literal to JSON formatted string.
+->> Mostly we use json pipe for devoloping and debugging part and testing purposes. It contains all the necessary information before 
+handling the API responses or http requests from server.
