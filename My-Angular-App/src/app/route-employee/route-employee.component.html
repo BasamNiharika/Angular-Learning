@@ -1,0 +1,16 @@
+<!-- <h1>Employee Id: {{id}}</h1>
+<h1> Employee Name: {{name}}</h1> -->
+
+
+<!-- Query Parameters -->
+<div class="query-parameters">
+    <h2>Employees</h2>
+    <ul>
+        @for(emp of Employees;track $index){
+        <li><a>
+                {{emp.name}}</a>
+                <button (click)="navigateToEmpoyeeDetails(emp.Id,emp.name)">ViewDetails</button>
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,8 @@
+<div class="card">
+    <h1>Employee details</h1>
+    @if(id && name){
+        <p><strong>Employee Id: </strong>{{id}}</p>
+        <p><strong>Employee Name: </strong>{{name}}</p>
+    }
+    <button (click)="naviagetBackToEmployee()">Back</button>
+</div>

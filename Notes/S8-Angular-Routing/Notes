@@ -1,0 +1,51 @@
+Angular Routing:
+
+ ->> Routing is the process of navigating between different conponents of an application.
+ ->> Routing is the essential tool to handle navigation.
+
+ ->> Several properties we can bind with in routing:
+ 1.path   2.component  3.loadComponent  4.redirectTo   5.pathMatch   6.children  etc...
+ e.g Routes=[
+    { path:'home' , component:HomeComponent } //static routing
+    ]
+
+ ->> Router-Outlet acts as a placeholder for the content which has to be displayed on the basis of the route given and this is 
+     handled by Angular dynamically.
+     <router-outlet></router-outlet> inside root components template (app component.html).
+
+ ->> RouterLink(attribut directive) directive is used for binding a link to a specific route.
+
+ static Routing:
+  ->> The traditional way of defining routes i.e the static routing; enables mapping between the URL and specific component.
+
+ Dynamic Routing:
+  ->>It is achieved by passing parameters to the routes.
+
+ ->> ** is the route parameter indicate an angular which specifies the given path does not exist in this application. 
+     It is called wildcard route.
+     -The moment we request for a non-existing URL, the router moves to the wildcard route and display the message.
+     - wild card route should be the last route defined in app.routes.
+
+ ->> RedirectTo: redirect the user  to a predefined route when they navigate to undefined route
+
+ ->> Children:
+  child routes are usually defined when we want to create a multi level navigation structure in Angular Application.
+
+
+  ->>By giving an empty path, we are specifying that- Angular can match any URL that doesnot have a specific path defined.
+  e.g {path:'',redirectTo:'home'}
+    ->> In latest versions, redirectTo supports only when pathMatch is specified.It is a routing strategy that tells the compiler
+    how to match the given route.
+    ->> pathMatch: 'full' ---- Match the whole route path.Will match the exact URL stated in the route path {'home'}
+        pathMatch: 'prefix' ----Match the URL route //Default
+
+ Activated Route:
+  ->> Activated Route is used to get the information about currently activated route.
+  ->> Provide access to various properties and parameters. Like route path, route parameters, query parameters.
+
+  ->> Query parameters in routing , allows passing optional parameters or additional information across the single route. These are the 
+    parameters passed inside the URL.
+    ->> query parameters are very useful when we want to fetch or pass the information through the URL and further modify the behaviour of 
+      the receiving component.
+    ->> Router service is the service used for navigating with various methods like navigate(),isActive() etc,.
+   

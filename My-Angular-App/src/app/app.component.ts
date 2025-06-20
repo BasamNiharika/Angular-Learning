@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { FundamentalsComponent } from "./fundamentals/fundamentals.component";
 import { Fundamentals2Component } from "./fundamentals-2/fundamentals-2.component";
 import { DirectivesComponent } from "./directives/directives.component";
@@ -9,6 +9,8 @@ import { ParentDecoratorComponent } from './parent-decorator/parent-decorator.co
 import { DecoratorAssignmentComponent } from "./decorator-assignment/decorator-assignment.component";
 import { AngularPipesComponent } from "./angular-pipes/angular-pipes.component";
 import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
+import { AngularRoutingComponent } from "./angular-routing/angular-routing.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +23,11 @@ import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
     // ParentDecoratorComponent,
     // DecoratorAssignmentComponent,
     // AngularPipesComponent
-    CustomPipesComponent
-    
+    // CustomPipesComponent,
+    // AngularRoutingComponent,
+    // CommonModule
+    RouterOutlet,
+    // RouterLink
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

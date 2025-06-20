@@ -1,0 +1,36 @@
+*{
+    font-family: sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 80px;
+}
+
+section div{
+    text-align: center;
+    border-radius: 5px;
+    width: 90vw;
+    height: 60vh;
+    box-shadow: #001a 0px 4px 12px ;
+}
+
+section h2{
+    position: relative;
+    bottom: 10px;
+    color: blueviolet;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+section p{
+    margin: 40px auto;
+    font-size: 1.2rem;
+    width: 800px;
+    line-height: 1.5rem;
+    color: #333;
+    font-weight: 200;
+    word-wrap: break-word;
+}
