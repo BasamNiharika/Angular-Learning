@@ -2,7 +2,7 @@
 <h1> Employee Name: {{name}}</h1> -->
 
 
-<!-- Query Parameters -->
+<!-- Query Parameters...2 -->
 <div class="query-parameters">
     <h2>Employees</h2>
     <ul>
@@ -14,3 +14,16 @@
         }
     </ul>
 </div>
+
+<!-- Query Parameters...1 WITH ROUTERLINK -->
+<!-- <div class="query-parameters">
+    <h2>Employees</h2>
+    <ul>
+        @for(emp of Employees;track $index){
+        <li><a [routerLink]="['/employee-detail']" [queryParams]="{ id:emp.Id,name:emp.name}">
+                {{emp.name}}</a>
+                <button (click)="navigateToEmpoyeeDetails(emp.Id,emp.name)">ViewDetails</button>
+            </li>
+        }
+    </ul>
+</div> -->
