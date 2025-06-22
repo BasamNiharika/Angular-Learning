@@ -1,0 +1,18 @@
+<div class="ard">
+    <h1>Employess details</h1>
+    <ul>
+        @for(employee of employees;track $index){
+        <li>{{employee.name}} {{employee.id}}
+            <button (click)="showDetails(employee.id)">Show Details</button>
+            <div>
+                @if(employee.id===empId){
+                <p>Id: {{emp.id}}</p>
+                <p>Department: {{emp.department}}</p>
+                <p>Location: {{emp.location}}</p>
+                <p>Phone:{{emp.phone}}</p>
+                }
+            </div>
+        </li>
+        }
+    </ul>
+</div>

@@ -9,6 +9,8 @@ import { ContactComponent } from './nav-bar/contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouteEmployeeComponent } from './route-employee/route-employee.component';
 import { RouteEmployeeDetailsComponent } from './route-employee-details/route-employee-details.component';
+import { AngularServiceComponent } from './angular-service/angular-service.component';
+import { ProvidersComponent } from './providers/providers.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -46,6 +48,10 @@ export const routes: Routes = [
   // Query Parameters
   { path: 'employee', component: RouteEmployeeComponent },
 
-  //navigating routes
+  // navigating routes
   { path: 'employee-detail', component: RouteEmployeeDetailsComponent },
+
+  { path: 'service', component: AngularServiceComponent },
+  // providers in services
+  { path: 'provide', component: ProvidersComponent },
 ];

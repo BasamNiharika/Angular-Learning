@@ -1,0 +1,31 @@
+Services:
+
+ To generate service use command
+ ->> ng generate service <--service-name here--> (or)
+ ->> ng g s <--service-name here-->
+
+ ->> This service file can be injected into any file or component throughout the application.
+
+ Dependency Injection:
+   ->> constructor(private parameterName: ServiceName){ ...} is known as DI.
+
+  ->> The services in Angular are very useful when we want to reuse a piece of logic in different components.
+  ->> The services in Angular are injected into the components using Dependency Injection mechanism.
+  ->> Injection is the process of making the function available.
+
+->> A Dependency doesn't have to be a service. It could be a function, value or a pipe.
+->> Rather than defining the  same class/method or object inside the main compoennet classes , its better to define in a single
+ class and inject inside different components whenever required.
+ 
+ ->> The @injectible decorator plays an important role in enabling and Dependency injection for a class as, it marks as injectable.
+
+ ->> Providers:
+ Providers are at three levels
+ 1. compoennet level (providers:[...])
+ 2. module level (providers:[...])
+ 3. service level (providedIn:root)
+
+ ->> Injecting services using inject() function.
+ * A flexible approach is to make use of inject() function to inject Dependencies.
+   e.g: const myservice = inject(Myservice);
+ * It enables a dependency injection directly within functional components and services without a constructor.
