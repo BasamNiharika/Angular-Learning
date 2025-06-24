@@ -12,6 +12,7 @@ import { RouteEmployeeDetailsComponent } from './route-employee-details/route-em
 import { AngularServiceComponent } from './angular-service/angular-service.component';
 import { ProvidersComponent } from './providers/providers.component';
 import { AngularTokensComponent } from './Tokens/angular-tokens/angular-tokens.component';
+import { FormsComponent } from './Angular-Template-driven/forms/forms.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -58,5 +59,9 @@ export const routes: Routes = [
   
   //Angular Tokens
   { path: 'tokens', component: AngularTokensComponent },
+  
+  // Angular Template Driven Forms:
+  { path: 'forms', component: FormsComponent },
+
   
 ];

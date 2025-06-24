@@ -1,0 +1,30 @@
+Angular Template Driven Forms:
+
+->> Important things that angular forms expected to is:
+ 1. Initialize the form fields and present it to the user.
+ 2. Capture the data from the user.
+ 3. Track changes made to the fields.
+ 4. Validate the changes.
+ 5. Display helpful errors to the users.
+
+ Angular provides two different of forms:
+  1. Template driven forms
+  2. Reactive forms
+  Both have unique advantages
+
+  Angular forms are divided into three basic building blocks:
+  FormControl (single input field)
+  FormGroup (collection of different form controls)
+      -It acts as a wrapper for a collection of form controls which helps in managing them by form control status
+  FormArray (It is an array of form controls)
+       -Form array allows controllinng of various controls like adding or removing input fields dynamically.
+
+1. Template driven form:
+  ->> ngForm is a directive provided by FormsModule.
+  ->> This directive is used for creating and handling forms in template driven approach.
+  ->> (ngSubmit) used to bind a method in the component to the form's submit event
+  ->> Properties provided by ngForm class:
+     valid, value, status, invalid, setvalue and more
+  ->> ngForm is a directive and NgForm is a class
+  ->> ngForm is a directive provided by angular to create an instance of a NgForm class.
+
