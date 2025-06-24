@@ -11,6 +11,7 @@ import { RouteEmployeeComponent } from './route-employee/route-employee.componen
 import { RouteEmployeeDetailsComponent } from './route-employee-details/route-employee-details.component';
 import { AngularServiceComponent } from './angular-service/angular-service.component';
 import { ProvidersComponent } from './providers/providers.component';
+import { AngularTokensComponent } from './Tokens/angular-tokens/angular-tokens.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -54,4 +55,8 @@ export const routes: Routes = [
   { path: 'service', component: AngularServiceComponent },
   // providers in services
   { path: 'provide', component: ProvidersComponent },
+  
+  //Angular Tokens
+  { path: 'tokens', component: AngularTokensComponent },
+  
 ];

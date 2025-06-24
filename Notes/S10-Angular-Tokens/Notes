@@ -1,0 +1,12 @@
+Angular Tokens:
+ ->> When there are multiple dependencies(services), then tokens are very useful. These tokens acts like a key to uniquely identify 
+ the provider because there are ,multiple dependencies inside an application.
+
+ ->> There are three types of tokens:
+type Tokens
+string tokens
+injectObject tokens
+
+->> UseValue
+->> UseClass
+->> UseExisting
