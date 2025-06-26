@@ -18,6 +18,7 @@ Angular Template Driven Forms:
       -It acts as a wrapper for a collection of form controls which helps in managing them by form control status
   FormArray (It is an array of form controls)
        -Form array allows controllinng of various controls like adding or removing input fields dynamically.
+  (These help in making forms dynamic and flexible)
 
 1. Template driven form:
   ->> ngForm is a directive provided by FormsModule.

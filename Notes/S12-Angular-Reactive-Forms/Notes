@@ -1,0 +1,33 @@
+Angular Reactive Forms:
+ ->> To build complex and dynamic forms
+ ->> Reactive forms allow to create form objects and link them to forms, to which- we can further add validation. 
+ ->> Reactive forms module is used for handling and providing various ways to manage the form controls, their values and validation.
+
+Form Group:
+ ->> Form Group is a class that is used for wrapping a collection of Form Controls.
+ ->> A Form Control within a form Group represents an individual form control to manage the state, value and validation.
+
+Form Array:
+ ->> A Form Array is a class which represents a collection or an array of form controls, form groups or form arrays.
+ ->> It is very useful to handle dynamic sets of form control and perform validations on them.
+
+   FormGroup <--- FormArray <--- FormControl
+
+FormBuilder
+ ->> FormBuilder class simplifies the process of building and handling forms within the application.
+ ->> This reduces boiler plate code and makes form creation process more concise and readable.
+
+Validating form controls:
+ ->> It check for the fields touched or not e.g nameControl, emailControl
+
+ 
+dirty property and pristine property: used to control and manage the form states.
+                                      useful in tracking the form control state.
+                                      privide essential information about the user interaction.
+                                      Return boolean value.
+
+Dirty property: becomes true when the user interacts with the control and modifies its value.(touched and altered by the user)
+                Default : false
+
+pristine property: it indicates the control is in its original state i.e unchaged state.Stays true until user interacted.
+                   Default : true

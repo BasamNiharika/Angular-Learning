@@ -1,0 +1,77 @@
+<!-- Form control example -->
+<!-- <input
+type="text"
+[formControl]="username"
+placeholder="Enter Name:"
+/>
+<button type="submit" (click)="showValue()">Show</button> -->
+
+<!-- Form Group -->
+<!-- <div class="container">
+    <form [formGroup]="myform" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" formControlName="name" class="form-control" />
+            <p class="form-label text-danger">pristine state - {{myform.get('name')?.pristine}} dirty state -
+                {{myform.get('name')?.dirty}}</p>
+
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" class="form-control" />
+            @if(myform.get('email')?.dirty && myform.get('email')?.invalid){
+            <div class="form-label text-danger">*Email required</div>
+            }
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" formControlName="age" class="form-control" />
+        </div>
+        <button type="sunmit" [disabled]="myform.pristine || myform.invalid">Submit</button>
+    </form>
+</div> -->
+
+
+<!-- Form Array -->
+<!-- <form [formGroup]="employeeForm" (ngSubmit)="onSubmitForm()">
+    <h2>Employee Form</h2>
+    <div formArrayName="employees">
+        @for(emp of employees.controls; track emp; let i=$index){
+        <div class="employee-row" [formGroupName]="i">
+            <div class="employee-field" >
+                <label>Name:</label>
+                <input type="text" formControlName="name" placeholder="enter employee name" />
+            </div>
+            <div class="employee-field">
+                <label>Job</label>
+                <input type="text" formControlName="job" placeholder="enter employee job.." />
+            </div>
+        </div>
+        }
+    </div>
+    <button class="add-employee" (click)="AddEmployee()">Add Employee</button>
+    <button class="submit-btn" [disabled]="employeeForm.invalid">Submit</button>
+</form> -->
+
+<!-- Form Builder -->
+<!-- <form [formGroup]="employeeForm" (ngSubmit)="onSubmitForm()">
+    <h2>Employee Form</h2>
+    <div formArrayName="employees">
+        @for(emp of employees.controls; track emp; let i=$index){
+        <div class="employee-row" [formGroupName]="i">
+            <div class="employee-field">
+                <label>Name:</label>
+                <input type="text" formControlName="name" placeholder="enter employee name" />
+            </div>
+            <div class="employee-field">
+                <label>Job</label>
+                <input type="text" formControlName="job" placeholder="enter employee job.." />
+            </div>
+        </div>
+        }
+    </div>
+    <button class="add-employee" (click)="AddEmployee()">Add Employee</button>
+    <button class="submit-btn" [disabled]="employeeForm.invalid">Submit</button>
+</form> -->
+
+<app-task1></app-task1>

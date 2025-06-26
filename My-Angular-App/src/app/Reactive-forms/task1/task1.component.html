@@ -1,0 +1,108 @@
+<!-- task 1 Multi step form  -->
+<!-- <div class="container">
+    <h1>Multi Step Form</h1>
+    @if(!isSubmitted){
+    <form [formGroup]="myform" (ngSubmit)="submitForm()">
+        <ng-container *ngIf="step == 1" formGroupName="userDetails">
+            <h4>User Details</h4>
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Full Name </label>
+                <input type="text" id="inputName" class="form-control" formControlName="name" />
+                @if(userDetails.get('name')?.invalid && userDetails.get('name')?.touched){
+                <span class="form-label text-danger">Please enter your name</span>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email </label>
+                <input type="email" id="inputEmail" class="form-control" formControlName="email" />
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Password </label>
+                <input type="password" id="inputPassword" class="form-control" formControlName="password" />
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf=" step == 2" formGroupName="additionalDetails">
+            <h4>Additional Details </h4>
+            <div class="mb-3">
+                <label for="inputMobile" class="form-label">Phone Number </label>
+                <input type="number" id="inputMobile" class="form-control" placeholder="+1" formControlName="mobile" />
+            </div>
+            <div class="mb-3">
+                <label for="textArea" class="form-label">Street Address</label>
+                <textarea id="textArea" class="form-control" placeholder="Enter Address"
+                    formControlName="address"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="inputGender" class="form-label">Gender</label>
+                <select id="inputGender" name="inputGender" class="form-control" formControlName="gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="">Prefer not to say</option>
+                </select>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf=" step == 3" formGroupName="feedback">
+            <h4>Feedback/Comments</h4>
+            <div class="mb-3">
+                <label for="comments" class="form-label">Comment</label>
+                <textarea id="comments" class="form-control" placeholder="Leave your comment here" style="height:100px"
+                    formControlName="comments"></textarea>
+            </div>
+        </ng-container>
+        <button *ngIf="step !=1" (click)="btnPrevious()" type="button" class="btn btn-primary mx-2">Previous</button>
+        <button (click)="btnNext()" type="button" class="btn btn-primary mx-2">Next</button>
+        <button *ngIf="step ==3" type="submit" class="btn btn-success">Submit</button>
+    </form>
+    }@if(isSubmitted){
+    <ng-container>
+        <h2 class="text-success">Form Submitted Successfully !!</h2>
+    </ng-container>
+    }
+</div> -->
+
+<!-- task-2 Multiple validations on password field -->
+
+<div class="conta">
+    <h1> Password Validation</h1>
+    <form [formGroup]="passwordForm" (ngSubmit)="submitForm()">
+        <div class="pwd">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" class="form-control" placeholder="enter password" formControlName="password"
+                required />
+            @if(passwordForm.get('password')?.invalid && passwordForm.get('password')?.dirty){
+            <div>
+                @if(passwordForm.get('password')?.errors?.['required']){
+                <div class="form-label text-danger">*Password required</div>
+                }
+            </div>
+            <div>
+                @if(passwordForm.get('password')?.errors?.['minlength']){
+                <div class="form-label text-danger">*Password must be 8 characters long</div>
+                }
+            </div>
+            <div>
+                @if(passwordForm.get('password')?.hasError?.('pattern') &&
+                !passwordForm.get('password')?.errors?.['minlength']
+                && !passwordForm.get('password')?.errors?.['required']
+                ){
+                <div class="form-label text-danger">*Password must contain atleast one capital letter </div>
+                }
+            </div>
+            <div>
+                @if(passwordForm.get('password')?.hasError?.('pattern')
+                && passwordForm.get('password')?.value?.includes(' ')
+                && !passwordForm.get('password')?.errors?.['minlength']
+                && !passwordForm.get('password')?.errors?.['required']
+                ){
+                <div class="form-label text-danger">*Password must not contain spaces </div>
+                }
+            </div>
+
+            }
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
