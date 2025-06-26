@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Custom Validator</h2>
+    <form [formGroup]="myform" (ngSubmit)="submitForm()">
+        <div>
+            <label for="username" class="form-label">User Name</label>
+            <input id="username" type="text" class="form-control" formControlName="username"/>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

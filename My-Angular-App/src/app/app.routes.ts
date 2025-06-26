@@ -14,6 +14,7 @@ import { ProvidersComponent } from './providers/providers.component';
 import { AngularTokensComponent } from './Tokens/angular-tokens/angular-tokens.component';
 import { FormsComponent } from './Angular-Template-driven/forms/forms.component';
 import { FormComponent } from './Reactive-forms/form/form.component';
+import { CustomComponent } from './custom-form-validators/custom/custom.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -67,6 +68,7 @@ export const routes: Routes = [
   // Reactive Forms:
   { path: 'form', component: FormComponent },
 
+  // Custom-form validators
+  { path: 'custom', component: CustomComponent },
 
-  
 ];
