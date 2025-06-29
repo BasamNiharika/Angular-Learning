@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AngularRoutingComponent } from './angular-routing/angular-routing.component';
-import { HomeComponent } from './nav-bar/home/home.component';
+import { HomeComponent } from '../app/route-guards/home/home.component';
 import { AboutComponent } from './nav-bar/about/about.component';
 import { WorkComponent } from './nav-bar/work/work.component';
 import { ServicesComponent } from './nav-bar/services/services.component';
@@ -15,6 +15,11 @@ import { AngularTokensComponent } from './Tokens/angular-tokens/angular-tokens.c
 import { FormsComponent } from './Angular-Template-driven/forms/forms.component';
 import { FormComponent } from './Reactive-forms/form/form.component';
 import { CustomComponent } from './custom-form-validators/custom/custom.component';
+import { AdminComponent } from './route-guards/admin/admin.component';
+import { testGuard } from './route-guards/test.guard';
+import { LoginComponent } from './route-guards/login/login.component';
+import { formGuardGuard } from './route-guards/form-guard.guard';
+import { authGuard } from './route-guards/auth.guard';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -58,17 +63,24 @@ export const routes: Routes = [
   { path: 'service', component: AngularServiceComponent },
   // providers in services
   { path: 'provide', component: ProvidersComponent },
-  
+
   //Angular Tokens
   { path: 'tokens', component: AngularTokensComponent },
-  
+
   // Angular Template Driven Forms:
   { path: 'forms', component: FormsComponent },
-  
+
   // Reactive Forms:
   { path: 'form', component: FormComponent },
 
   // Custom-form validators
   { path: 'custom', component: CustomComponent },
 
+  //route Guards
+  // { path: 'admin', component: AdminComponent, canActivate: [testGuard] },
+  // { path: 'home', component: HomeComponent },
+  // { path: 'form-guard', component: LoginComponent, canDeactivate: [formGuardGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [authGuard] },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];

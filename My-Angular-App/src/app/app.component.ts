@@ -11,6 +11,7 @@ import { AngularPipesComponent } from "./angular-pipes/angular-pipes.component";
 import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 import { AngularRoutingComponent } from "./angular-routing/angular-routing.component";
 import { CommonModule } from '@angular/common';
+import { AuthService } from './route-guards/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,8 @@ import { CommonModule } from '@angular/common';
     // RouterLink
 ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers:[AuthService]
 })
 export class AppComponent {
   title = 'My-Angular-App';

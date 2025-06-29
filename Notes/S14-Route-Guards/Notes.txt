@@ -1,0 +1,55 @@
+Route Guards:
+ ->> Route Guards or routing guards in Angular are a way to hide or protect the application routes from unwanted/unauthorized access.
+ It works like a security mechanism that checks if the user is allowed to access a certain route or not.
+
+ To generate a guard use below command in CLI:
+  ng generate guard <--guard name here --> or ng g g <-- guard name here -->
+
+There are four types of route guards:
+1. CanActivate
+2. CanActivateChild
+3. CanDeactivate
+4. CanMatch
+
+1. CanActivate (moves forward to activate)
+ ->> Traditionally, They used to write canActivate class but in latest they are achieving it through canActivate function().
+ ->> The new CanActivateFunction guard is a simpler, cleaner way to control route access, using just a function.
+ ->> It is easier to use and more flexible.
+ ->> CanActivateFn is called everytime when route on which canActivate guard is specified( e.g "admin" path) is accessed. The accessibity 
+ depends on whether that function returns true or false.
+ ->> canActivate Array can have multiple values [guardA, guradB...]
+
+2. CanDeactivate (moves Backward from activate to deactivate)
+ ->> The canDeactivate route guard is used for preventing users - from navigating away from a specific route or component
+ ->> This guard can be useful to prevent a user from accidentally navigating away without saving or some other undone tasks.
+
+3.CanActivateChild
+ ->> To decide whether or not the child route of a specific route should be activated. The CanActivateChild rote guard is used.\
+ ->> It is used to protect nested or child routes within a parent route inside the angular application.
+ ->> It is always used in parent route configuration.
+ e.g:
+ {
+    path: 'parent',
+    component: AngularRoutingComponent,
+    CanActivateChild:[authGuard]
+    children: [
+      { path: 'child1', component: HomeComponent },
+      { path: 'child2', component: ServicesComponent },
+    ],
+  }
+
+4.CanMatch 
+It is used when there are more than one route with same path name.
+With the canMatch guard we can define the same route several times with different canMatch guards and navigate to a specific one.
+e.g:
+{ 
+  path:'home,
+  canMatch;{guardFile 1},
+  loadChildren: ()=>...
+},
+{ 
+  path:'home,
+  canMatch;{guardFile 2},
+  loadChildren: ()=>...
+},
+
