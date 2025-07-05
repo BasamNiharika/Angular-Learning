@@ -21,6 +21,7 @@ import { LoginComponent } from './route-guards/login/login.component';
 import { formGuardGuard } from './route-guards/form-guard.guard';
 import { authGuard } from './route-guards/auth.guard';
 import { ObservableComponent } from './Observables/observable/observable.component';
+import { OperatorsComponent } from './RxJS/operators/operators.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -87,4 +88,7 @@ export const routes: Routes = [
 
   //Observables or RxJS
   { path: 'obs', component: ObservableComponent },
+
+  // RxJS Operators
+  { path: 'rxjs', component: OperatorsComponent },
 ];
