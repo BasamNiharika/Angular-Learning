@@ -13,7 +13,7 @@
   ### interval() operator:
   -  interval() function can be used with time-based operations.
 
-  ### timer() operatir:
+  ### timer() operator:
   - The timer Operator provides a convenient way to handle time related behaviour.
    timer(dueTime, periodScheduler, asyncScheduler (optional) )
 
