@@ -20,6 +20,7 @@ import { testGuard } from './route-guards/test.guard';
 import { LoginComponent } from './route-guards/login/login.component';
 import { formGuardGuard } from './route-guards/form-guard.guard';
 import { authGuard } from './route-guards/auth.guard';
+import { ObservableComponent } from './Observables/observable/observable.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -83,4 +84,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent, canActivate: [authGuard] },
   // { path: '', redirectTo: '/login', pathMatch: 'full' },
+
+  //Observables or RxJS
+  { path: 'obs', component: ObservableComponent },
 ];

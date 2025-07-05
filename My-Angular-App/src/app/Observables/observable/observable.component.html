@@ -1,0 +1,42 @@
+<!-- Async pipe -->
+<!-- <h1>Understanding Async pipe</h1>
+<p> Value from observable: {{ value$ | async}}</p> -->
+
+<!-- Async pipe with array -->
+<!-- <h1>Understanding Async pipe</h1>
+@for (item of value$ | async ; track $index) {
+    <p> {{item}} </p>
+} -->
+
+<!-- Async pipe with promise -->
+ <!-- <h1>promise</h1>
+ <p> {{resolvePromise$ | async }}</p> -->
+
+<!-- Task-Fetching JSON data with Async Pipe -->
+<!-- <div class="cont">
+    <h1>Fetching Data from JSON</h1>
+    <ng-container>
+        @if(jsonData$ |async;as data){
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categories</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(category of data;track category){
+                        <tr>
+                            <td>{{ category }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }@else {
+            <p class="loading">Loading...</p>
+        }
+    </ng-container>
+</div> -->
+
+<!-- hot Observabke an cold Observale -->
+<h1>Subscriber 1</h1>
+
