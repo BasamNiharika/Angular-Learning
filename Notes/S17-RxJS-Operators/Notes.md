@@ -1,5 +1,5 @@
 # RxJS Operators:
-- RxJS opertaors provides may operators for Observables.
+- RxJS opertaors provides many operators for Observables.
 
 ## creation Operators:
   ### of() operator:
