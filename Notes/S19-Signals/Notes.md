@@ -1,5 +1,5 @@
 # Signals:
-  - Inside from solid.js
+  - Inspired from solid.js
   - It follows push pull pattern where push allows you to set new values or mutate the original value and pull allow you to retrieve those
     values. 
   - The Signals provide an alternative way to manage the state changes inside the application.
