@@ -23,6 +23,7 @@ import { authGuard } from './route-guards/auth.guard';
 import { ObservableComponent } from './Observables/observable/observable.component';
 import { OperatorsComponent } from './RxJS/operators/operators.component';
 import { MethodsComponent } from './HTTP/methods/methods.component';
+import { SignalComponent } from './Signals/signal/signal.component';
 
 export const routes: Routes = [
   // { path: 'route', component: AngularRoutingComponent }, //static routing
@@ -95,4 +96,8 @@ export const routes: Routes = [
   
   // HTTP handling
   { path: 'http', component: MethodsComponent },
+  
+  // Signals
+  { path: 'signal', component: SignalComponent },
+
 ];

@@ -1,0 +1,91 @@
+<!-- <div class="signals">
+    <h1>Signals <span>Intro</span></h1>
+    <button (click)="incrementCounter()">INC</button>
+    <p>{{count()}}</p>
+</div> -->
+
+<!-- <h1>Angular <span>Signals</span></h1>
+<div>
+    <p>{{cart() |json}}</p>
+</div> -->
+
+<!-- Task: To do List -->
+<!-- <div class="container">
+    <div class="todo-app">
+        <div class="app-title">
+            <h1>To-do App</h1>
+            <i class="fa fa-link" aria-hidden="true"></i>
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Add a to-do item" [(ngModel)]="todoName" #todo />
+            <button type="button" (click)="addTodo(todo)" class="addBtn">Add Task</button>
+        </div>
+        <ul>
+            @for(item of todos();track item; let i=$index ){
+            <li class="todo-item">{{item}}
+                <button type="button" class="removeBtn" (click)="removeTodo(i)">Remove Task</button>
+            </li>
+            }
+        </ul>
+    </div>
+</div> -->
+
+<!-- Computed Signals -->
+<!-- <div class="container">
+    <div class="subClass">
+        <h2>Signal: {{this.count()}}</h2>
+        <h2>Computed Signal: {{this.remainingCount()}}</h2>
+    </div>
+    <div class="subclass2">
+        <ul>
+            @for(item of this.arr(); track item){
+                <li>{{item}}</li>
+            }
+        </ul>
+        <button type="button" (click)="modifyArr()">Add item</button>
+        <h2>Sum of Array: {{sumArr()}}</h2>
+    </div>
+ </div> -->
+
+<!-- untracked signals -->
+<!-- <div class="container">
+    <div class="subdiv">
+        <h2>Counter 1</h2>
+        <h4>{{counter1()}}</h4>
+        <button (click)="updateCounter1()">Update Counter 1</button>
+    </div>
+    <div class="subdiv">
+        <h2>Counter 2</h2>
+        <h4>{{counter2()}}</h4>
+        <button (click)="updateCounter2()">Update Counter 2</button>
+    </div>
+  </div> -->
+
+<!-- linked Signals -->
+<!-- <h2>Value: {{value()}}</h2>
+   <h2>LinkedValue:{{linkedValue()}}</h2> -->
+
+<!-- Task- Filtering Products based on user input with linked signals() -->
+<div class="app-container">
+    <div class="select-container">
+        <h2>Filter Items:</h2>
+        <select (change)="updateCategory($event)">
+            <option value="">All Categories</option>
+            @for (item of categories(); track $index) {
+            <option [value]="item">{{ item | titlecase }}</option>
+            }
+        </select>
+        <input type="text" placeholder="Search item" (input)="updateSearchQuery($event)">
+    </div>
+    <div class="result-conatainer">
+        <h2>Items in {{selectedCatergory() || "All" | titlecase}} category</h2>
+        <ul>
+            @for (item of fetchedItems(); track item) {
+            <li>{{item.title}}</li>
+            }
+        </ul>
+    </div>
+    @if(fetchedItems().length===0){
+        <p>No items found</p>
+    }
+</div>
