@@ -1,18 +1,18 @@
 General Notes about Angular:
-  -- TypeScipt is a Javascript superset-an extension of Javascript 
+  -- TypeScript is an extension of Javascript. TypeScript is generated from JavaScript with strict Type-checking.
      |
      |
   (Strong and strict typing).
  
- -- With TypeScipt, it can be easy to catch errors early during development
+ -- With TypeScript, it can be easy to catch errors early during development
 
  -- Angular-> new Major version is released for every 6 months.
               It is back-ward compatible and stablity.
 
- -- TypeScipt(it is declarative code)
+ -- TypeScript(it is declarative code)
 
- --config files in Angular are responesible for converting TypeScipt to Javascript and helps in compilation( generally browser 
- do not support TypeScipt)
+ --config files in Angular are responesible for converting TypeScript to Javascript and helps in compilation( generally browser 
+ do not support TypeScript)
 
  --package.json files have dependencies
  --angular.json have configurations
@@ -26,7 +26,10 @@ General Notes about Angular:
 
 
 To check Angular version 
- In Angular CLI enter :  ng version 
+ In Angular CLI enter :  ng version (or) ng v
 
 To install Angular@CLI globally
  In Angular CLI enter : npm i -g @angular/cli 
+
+To install tailwind css:
+npm install tailwindcss @tailwindcss/postcss postcss --force
