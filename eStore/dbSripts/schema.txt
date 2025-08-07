@@ -1,0 +1,30 @@
+   <--- Database --->
+Create schema eStore;
+
+   <--- table Schema for categories --->
+Create table eStore.categories (
+id int not null,
+category varchar(45) default null,
+parents_category_id int default null,
+primary key(id)
+);
+
+   <--- inserting data into table --->
+Insert into eStore.categories(id,category,parents_category_id) values (1,'Men',null),(2,'Women',null),(3,'Kids',null),(4,'Casual Wear',1),
+(5,'PartyWear',2),(6,'Foot Wear',2),(7,'Accessories',3);
+
+   <--- table Schema for products --->
+create table eStore.products (
+id int not null,
+product_name varchar(45) default null,
+product_description varchar(100) default null,
+price int default null,
+ratings decimal(10,2) default null,
+category_id int default null,
+product_img varchar(45),
+primary Key(id),
+Key FK_Products_Categories_id(category_id),
+constraint FK_Products_Categories
+foreign key (category_id) references eStore.categories(id)
+on update cascade on delete cascade
+);
