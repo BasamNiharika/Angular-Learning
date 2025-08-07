@@ -10,6 +10,11 @@
             <h5 class="font-semibold"><a class="text-black hover:text-black no-underline"
                     href="#">{{product.product_name}}</a></h5>
             <p class="text-base font-normal mt-1">{{product.price | currency}}</p>
+            @if(product.price>0){
+            <ng-container>
+                <app-ratings [rating]="product.rating"></app-ratings>
+            </ng-container>
+            }
         </div>
     </div>
     }
