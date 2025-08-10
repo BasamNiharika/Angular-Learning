@@ -9,6 +9,10 @@ parents_category_id int default null,
 primary key(id)
 );
 
+   <--- table Schema update for categories --->
+ALTER TABLE eStore.categories
+RENAME COLUMN parents_category_id TO parent_category_id;
+
    <--- inserting data into table --->
 Insert into eStore.categories(id,category,parents_category_id) values (1,'Men',null),(2,'Women',null),(3,'Kids',null),(4,'Casual Wear',1),
 (5,'PartyWear',2),(6,'Foot Wear',2),(7,'Accessories',3);
@@ -19,7 +23,7 @@ id int not null,
 product_name varchar(45) default null,
 product_description varchar(100) default null,
 price int default null,
-ratings decimal(10,2) default null,
+ratings decimal(10,1) default null,
 category_id int default null,
 product_img varchar(45),
 primary Key(id),
@@ -28,3 +32,14 @@ constraint FK_Products_Categories
 foreign key (category_id) references eStore.categories(id)
 on update cascade on delete cascade
 );
+
+INSERT INTO eStore.products(id, product_name, product_description, price, ratings, category_id, product_img) VALUES
+(1, 'Jacket', 'Warm and stylish jacket for cold weather', 100, 3.4, NULL, 'shop-1'),
+(2, 'Purse', 'Elegant purse to carry your essentials', 25, 4, NULL, 'shop-2'),
+(3, 'Dress', 'Beautiful dress perfect for parties ', 45, 5, NULL, 'shop-3'),
+(4, 'Denim Jeans', 'Comfortable denim jeans with a modern fit', 50, 2.5, NULL, 'shop-4'),
+(5, 'Laced Boots', 'Durable and fashionable laced boots', 55, 3.5, NULL, 'shop-5'),
+(6, 'Back pack', 'Spacious backpack for daily use or travel', 70, 4, NULL, 'shop-6'),
+(7, 'earings', 'Stylish earrings to complement your outfit', 75, 5, NULL, 'shop-7'),
+(8, 'scarf', 'Cozy scarf to keep you warm in winter', 50, 2.8, NULL, 'shop-8'),
+(9, 'Boots', 'High-quality boots suitable for all terrains', 120, 3.9, NULL, 'shop-9');
